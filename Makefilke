@@ -1,0 +1,12 @@
+CC = gcc
+CFLAGS = -Iinc
+
+SRC = src/main.c src/calc.c
+OUT = app
+
+all:
+    $(CC) $(SRC) $(CFLAGS) -o $(OUT)
+
+test:
+    $(CC) test/test_calc.c src/calc.c -Iinc -o test_app
+    ./test_app
