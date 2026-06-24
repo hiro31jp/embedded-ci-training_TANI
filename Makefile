@@ -1,4 +1,6 @@
 CC=gcc
+.PHONY: all test
+
 all:
 	gcc src/main.c src/calc.c -Iinc -o app
 test:
